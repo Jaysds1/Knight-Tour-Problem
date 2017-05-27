@@ -30,6 +30,7 @@
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.label4 = new System.Windows.Forms.Label();
             this.row = new System.Windows.Forms.NumericUpDown();
             this.col = new System.Windows.Forms.NumericUpDown();
             this.trials = new System.Windows.Forms.NumericUpDown();
@@ -41,7 +42,6 @@
             this.smart = new System.Windows.Forms.RadioButton();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.OutputBox = new System.Windows.Forms.RichTextBox();
-            this.label4 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.row)).BeginInit();
@@ -80,6 +80,15 @@
             this.tabPage1.Text = "Chess";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(294, 55);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(81, 13);
+            this.label4.TabIndex = 12;
+            this.label4.Text = "Computer Mind:";
+            // 
             // row
             // 
             this.row.Location = new System.Drawing.Point(335, 201);
@@ -100,6 +109,11 @@
             this.trials.Name = "trials";
             this.trials.Size = new System.Drawing.Size(55, 20);
             this.trials.TabIndex = 9;
+            this.trials.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             // 
             // label3
             // 
@@ -179,15 +193,6 @@
             this.OutputBox.Size = new System.Drawing.Size(382, 329);
             this.OutputBox.TabIndex = 0;
             this.OutputBox.Text = "";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(294, 55);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(81, 13);
-            this.label4.TabIndex = 12;
-            this.label4.Text = "Computer Mind:";
             // 
             // Form1
             // 

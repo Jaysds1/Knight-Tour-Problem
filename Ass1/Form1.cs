@@ -33,6 +33,7 @@ namespace KnightTour
             else if (nonS)
             {
                 Non_Intelligent nonI = new Non_Intelligent(trial, x, y);
+                //setOutputBox(nonI.ToString);
             }
             else
                 MessageBox.Show("Select Computer Method", "Computer Method", MessageBoxButtons.OK, MessageBoxIcon.Error);
