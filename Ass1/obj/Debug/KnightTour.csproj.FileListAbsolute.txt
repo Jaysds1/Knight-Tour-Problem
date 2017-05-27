@@ -1,0 +1,9 @@
+C:\Users\Acer\Documents\School\C#\Ass1\Ass1\obj\Debug\KnightTour.Form1.resources
+C:\Users\Acer\Documents\School\C#\Ass1\Ass1\obj\Debug\KnightTour.Properties.Resources.resources
+C:\Users\Acer\Documents\School\C#\Ass1\Ass1\obj\Debug\KnightTour.csproj.GenerateResource.Cache
+C:\Users\Acer\Documents\School\C#\Ass1\Ass1\bin\Debug\KnightTour.exe.config
+C:\Users\Acer\Documents\School\C#\Ass1\Ass1\obj\Debug\KnightTour.csprojResolveAssemblyReference.cache
+C:\Users\Acer\Documents\School\C#\Ass1\Ass1\bin\Debug\KnightTour.exe
+C:\Users\Acer\Documents\School\C#\Ass1\Ass1\bin\Debug\KnightTour.pdb
+C:\Users\Acer\Documents\School\C#\Ass1\Ass1\obj\Debug\KnightTour.exe
+C:\Users\Acer\Documents\School\C#\Ass1\Ass1\obj\Debug\KnightTour.pdb

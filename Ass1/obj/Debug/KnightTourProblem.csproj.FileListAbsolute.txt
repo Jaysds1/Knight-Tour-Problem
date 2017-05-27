@@ -1,0 +1,2 @@
+C:\Users\Acer\Documents\School\C#\Ass1\Ass1\bin\Debug\KnightTourProblem.exe.config
+C:\Users\Acer\Documents\School\C#\Ass1\Ass1\bin\Debug\KnightTour.exe.config

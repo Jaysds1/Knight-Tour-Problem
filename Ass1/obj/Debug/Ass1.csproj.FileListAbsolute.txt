@@ -1,0 +1,5 @@
+C:\Users\Acer\Documents\School\C#\Ass1\Ass1\bin\Debug\Ass1.exe.config
+C:\Users\Acer\Documents\School\C#\Ass1\Ass1\obj\Debug\Ass1.csprojResolveAssemblyReference.cache
+C:\Users\Acer\Documents\School\C#\Ass1\Ass1\obj\Debug\Ass1.Form1.resources
+C:\Users\Acer\Documents\School\C#\Ass1\Ass1\obj\Debug\Ass1.Properties.Resources.resources
+C:\Users\Acer\Documents\School\C#\Ass1\Ass1\obj\Debug\Ass1.csproj.GenerateResource.Cache
