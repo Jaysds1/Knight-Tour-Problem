@@ -8,11 +8,10 @@ namespace KnightTour
 {
     class Knight:Chess
     {
-        private int[][] move = { new int[]{2,1}, new int[]{1,2} }; // {Horizontal, Vertical}
+        private int[][] move = { new int[]{2,1}, new int[]{1,2} }; // Allowed moves {Horizontal, Vertical}
         
         public int[,] getOptions()
         {
-            //Is it in a corner?
             int[] pos = Position; //[x,y]
             int x=pos[0],y=pos[1];
             int[][] availMoves = new int[][]{
@@ -20,8 +19,9 @@ namespace KnightTour
                                      new int[4]{y+move[0][1],y-move[0][1], y+move[1][1], y-move[1][1]}
                                  };
             int[,] r = new int[8,2]; //Returning Variable with the options
-            //Moves allowed to make (Max:8)
+
             /*
+             * Moves allowed to make (Max:8)
          * X, Y
          * x+2,y+1 - Left Up L Horizontal
          * x-2,y+1 - Right Up L Horizontal
@@ -37,56 +37,36 @@ namespace KnightTour
                 if (i < 4)
                 {
                     if (!Bound(availMoves[0][i], availMoves[1][i]))
+                    {
+                        r[i, 0] = 0;
+                        r[i, 1] = 0;
                         continue;
+                    }
                     r[i, 0] = availMoves[0][i];
                     r[i, 1] = availMoves[1][i];
                 }
                 else
                 {
-                    if (!Bound(availMoves[0][i-4], availMoves[1][i-4]))
+                    if (!Bound(availMoves[0][i - 4], availMoves[1][i - 4]))
+                    {
+                        r[i, 0] = 0;
+                        r[i, 1] = 0;
                         continue;
+                    }
                     r[i, 0] = availMoves[0][i-4];
                     r[i, 1] = availMoves[1][i-4];
                 }
             }
-                /*Horizontal
-                for (int yy = 0; yy < 2; yy++)
-                {
-                    for (int xx = 0; xx < 2; xx++)
-                    {
-                        if (!Bound(availMoves[0][xx], availMoves[1][yy]))
-                            continue;
-                        if (board[availMoves[0][xx]][availMoves[1][yy]] == 0)
-                        {
-                            r[xx][0] = availMoves[0][xx];
-                            r[yy][1] = availMoves[1][yy];
-                        }
-                    }
-                }
-            //Vertical
-            for (int yy = 2; yy < 4; yy++)
-            {
-                for (int xx = 2; xx < 4; xx++)
-                {
-                    if(!Bound(availMoves[0][xx],availMoves[1][yy]))
-                        continue;
-                    if (board[availMoves[0][xx]][availMoves[1][yy]] == 0)
-                    {
-                        r[xx][0] = availMoves[0][xx];
-                        r[yy][1] = availMoves[1][yy];
-                    }
-                }
-            }*/
             return r;
         }
-        private bool Bound(int x, int y)
+        private bool Bound(int x, int y) //Check if values are off the board
         {
             if (x > 0 && x < 8)
                 if (y > 0 && y < 8)
                     return true;
             return false;
         }
-        public void Move(int x, int y)
+        public void Move(int x, int y) //Move the knight
         {
             if(x>0 && y>0)
                 Position = new int[]{x,y};

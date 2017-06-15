@@ -6,4 +6,3 @@ C:\Users\Acer\Documents\School\C#\Ass1\Ass1\bin\Debug\KnightTour.exe
 C:\Users\Acer\Documents\School\C#\Ass1\Ass1\bin\Debug\KnightTour.pdb
 C:\Users\Acer\Documents\School\C#\Ass1\Ass1\obj\Debug\KnightTour.exe
 C:\Users\Acer\Documents\School\C#\Ass1\Ass1\obj\Debug\KnightTour.pdb
-C:\Users\Acer\Documents\School\C#\Ass1\Ass1\obj\Debug\KnightTour.csprojResolveAssemblyReference.cache

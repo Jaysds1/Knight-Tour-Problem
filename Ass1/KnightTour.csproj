@@ -51,6 +51,7 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Intelligent.cs" />
     <Compile Include="Knight.cs" />
     <Compile Include="Non-Intelligent.cs" />
     <Compile Include="Program.cs" />

@@ -14,18 +14,31 @@ namespace KnightTour
          */
         const string fn = "JaiquonNonIntelligentMethod.txt";
         private static Knight k = new Knight();
-        int trials, squares, standDev;
+        public int trials, squares; //Trials = Game runs, Squares = movements,
+        public double avg, standDev;// Standard Deviation = 
+        
 
         public Non_Intelligent(int trials, int x, int y)
         {
-            this.trials = trials;
-            k.Position = new int[]{x,y};
+            int[] sqs = new int[trials];
+            this.trials = trials; //Set Trials
+            k.Position = new int[]{x,y}; //Initialize default position
             for (int t = 0; t < trials; t++)
             {
                 Start();
                 OutputTrial(t + 1);
+                if (trials > 1)
+                    sqs[t] = squares;
             }
-        } 
+            if (trials == 1) return;
+            for (int s=0; s < sqs.Length; s++)
+                avg += sqs[s];
+            avg /= trials;
+            for (int s=0; s < sqs.Length; s++)
+                standDev += Math.Pow(sqs[s] - avg,2);
+            standDev *= 1 / 5.0;
+            standDev = Math.Sqrt(standDev);
+        }
         private void Start() {
             int[,] moves = k.getOptions(); //Get first options
             Random r = new Random();
@@ -38,15 +51,15 @@ namespace KnightTour
                 {
                     int i = r.Next(8); //Get random move
                     //Check if the random move is not set
-                    while (moves[i, 0] == 0 || moves[i, 1] == 0)
+                    while (moves[i, 0] == 0 && moves[i, 1] == 0)
                         i = r.Next(8); //Set new move
                     //Set Knight to position
                     k.Position[0] = moves[i, 0];
                     k.Position[1] = moves[i, 1];
                     oc++;
-                    if (oc >= 8) break; //If options are already out
+                    if (oc >= 18) break; //If options are already out
                 }
-                if (oc >= 8) break; //End of game
+                if (oc >= 18) break; //End of game
                 board[k.Position[0],k.Position[1]] = bc++;//Update the board movement
                 moves = k.getOptions(); //Get new options
                 squares++;
@@ -59,7 +72,10 @@ namespace KnightTour
             {
                 for (int y = 0; y < 8; y++)
                 {
-                    Write(board[x,y]+"\t");
+                    if(y<7)
+                        Write(board[x, y] + "\t");
+                    else
+                        Write(board[x,y]+"");
                 }
                 Write("\n");
             }
